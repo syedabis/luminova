@@ -54,7 +54,7 @@ export default function EngineerContact() {
             }}>
               <Terminal size={15} color="#38bdf8" />
               <span style={{ fontSize: '12px', fontWeight: 700, color: '#38bdf8', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                DIRECT CONSULTATION WITH ALEX
+                DIRECT CONSULTATION WITH SYED ABIS
               </span>
             </div>
 
@@ -62,7 +62,7 @@ export default function EngineerContact() {
               Want to Automate Your Stack?
             </h2>
             <p style={{ fontSize: '16px', color: '#94a3b8', margin: 0 }}>
-              Book a 1-on-1 technical discovery call with Alex Vance to review your AI feasibility and architecture roadmap.
+              Book a 1-on-1 technical discovery call with Syed Abis to review your AI feasibility and architecture roadmap.
             </p>
           </div>
 
@@ -85,7 +85,7 @@ export default function EngineerContact() {
                 Consultation Request Dispatched!
               </h3>
               <p style={{ fontSize: '15px', color: '#94a3b8', maxWidth: '420px', margin: '0 auto' }}>
-                Thanks <strong style={{ color: '#ffffff' }}>{formData.name}</strong>. Alex will review your workflow specs and respond to <strong style={{ color: '#38bdf8' }}>{formData.email}</strong> within 15 minutes.
+                Thanks <strong style={{ color: '#ffffff' }}>{formData.name}</strong>. Syed Abis will review your workflow specs and respond to <strong style={{ color: '#38bdf8' }}>{formData.email}</strong> within 15 minutes.
               </p>
             </div>
           ) : (
@@ -139,7 +139,7 @@ export default function EngineerContact() {
                 <textarea
                   required
                   rows={4}
-                  placeholder="Describe your current software stack (CRMs, APIs) and the AI automation goals you want Alex to engineer..."
+                  placeholder="Describe your current software stack (CRMs, APIs) and the AI automation goals you want Syed Abis to engineer..."
                   value={formData.projectScope}
                   onChange={(e) => setFormData({ ...formData, projectScope: e.target.value })}
                   style={{
@@ -176,7 +176,7 @@ export default function EngineerContact() {
                   transition: 'all 0.3s ease'
                 }}
               >
-                Book 1-on-1 Call with Alex Vance
+                Book 1-on-1 Call with Syed Abis
                 <ArrowRight size={18} />
               </button>
             </form>

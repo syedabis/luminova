@@ -6,21 +6,21 @@ import { Star, MessageSquare } from 'lucide-react';
 export default function EngineerTestimonials() {
   const testimonials = [
     {
-      quote: "Alex re-engineered our entire lead intake infrastructure in under 10 days. Our response times went from 4 hours to 15 seconds, driving an immediate 35% boost in booked client calls.",
+      quote: "Syed Abis re-engineered our entire lead intake infrastructure in under 10 days. Our response times went from 4 hours to 15 seconds, driving an immediate 35% boost in booked client calls.",
       author: "David Sterling",
       role: "VP of Growth & Operations",
       company: "Apex Global Logistics",
       stars: 5
     },
     {
-      quote: "The AP invoice extraction system built by Alex processes 5,000+ multi-page PDF documents monthly with zero manual errors. He is one of the sharpest AI systems architects in the industry.",
+      quote: "The AP invoice extraction system built by Syed Abis processes 5,000+ multi-page PDF documents monthly with zero manual errors. He is one of the sharpest AI systems architects in the industry.",
       author: "Elena Rostova",
       role: "Chief Technology Officer",
       company: "FinTech ScaleUp Corp",
       stars: 5
     },
     {
-      quote: "Our front desk staff was overwhelmed by phone calls. Alex deployed a custom voice AI agent that handles appointment bookings effortlessly. It's like adding 3 full-time staff members overnight.",
+      quote: "Our front desk staff was overwhelmed by phone calls. Syed Abis deployed a custom voice AI agent that handles appointment bookings effortlessly. It's like adding 3 full-time staff members overnight.",
       author: "Dr. Marcus Vance",
       role: "Founder & Lead Physician",
       company: "HealthPulse Medical",
@@ -34,14 +34,14 @@ export default function EngineerTestimonials() {
       stars: 5
     },
     {
-      quote: "Alex's multi-agent workflow automated our field telemetry logging across 12 regional sites. His understanding of low-latency API architectures is exceptional.",
+      quote: "Syed Abis's multi-agent workflow automated our field telemetry logging across 12 regional sites. His understanding of low-latency API architectures is exceptional.",
       author: "Tariq Al-Mansoor",
       role: "Chief Operating Officer",
       company: "Saudi Energy Tech",
       stars: 5
     },
     {
-      quote: "Document discovery used to take our paralegal team 30+ hours per case. The Pinecone RAG search system Alex deployed cut that to under 45 seconds with 100% citation accuracy.",
+      quote: "Document discovery used to take our paralegal team 30+ hours per case. The Pinecone RAG search system Syed Abis deployed cut that to under 45 seconds with 100% citation accuracy.",
       author: "Michael Chang",
       role: "Partner & General Counsel",
       company: "LegalPulse Partners",
@@ -103,7 +103,7 @@ export default function EngineerTestimonials() {
             What Founders & CTOs Say
           </h2>
           <p style={{ fontSize: '16px', color: '#94a3b8', margin: 0 }}>
-            Direct feedback from business leaders whose operations are powered by Alex Vance's AI architectures. Hover to pause auto-loop.
+            Direct feedback from business leaders whose operations are powered by Syed Abis's AI architectures. Hover to pause auto-loop.
           </p>
         </div>
 

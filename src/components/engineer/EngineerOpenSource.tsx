@@ -11,7 +11,7 @@ export default function EngineerOpenSource() {
       forks: "210",
       description: "Python middleware for FastAPI ensuring Pydantic JSON schema validation and zero-hallucination fallbacks for OpenAI & Claude endpoints.",
       tech: ["Python", "FastAPI", "Pydantic", "OpenAI"],
-      link: "https://github.com"
+      link: "https://github.com/syedabis"
     },
     {
       name: "langchain-pinecone-hybrid",
@@ -19,7 +19,7 @@ export default function EngineerOpenSource() {
       forks: "145",
       description: "High-performance hybrid vector retrieval package combining dense OpenAI embeddings with sparse BM25 keyword rankings.",
       tech: ["TypeScript", "LangChain", "Pinecone", "RAG"],
-      link: "https://github.com"
+      link: "https://github.com/syedabis"
     },
     {
       name: "n8n-nodes-retell-ai",
@@ -27,7 +27,7 @@ export default function EngineerOpenSource() {
       forks: "95",
       description: "Custom community node for n8n to trigger, manage, and process real-time voice call webhooks from Retell AI & Vapi.",
       tech: ["JavaScript", "n8n Workflows", "Voice AI"],
-      link: "https://github.com"
+      link: "https://github.com/syedabis"
     }
   ];
 

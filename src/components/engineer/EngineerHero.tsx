@@ -70,7 +70,7 @@ export default function EngineerHero() {
                 background: 'linear-gradient(135deg, #38bdf8 0%, #c084fc 50%, #34d399 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
-              }}>Alex Vance</span>. <br />
+              }}>Syed Abis</span>. <br />
               I Build Autonomous AI Systems.
             </h1>
 
@@ -167,7 +167,7 @@ export default function EngineerHero() {
                 <span style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#f59e0b' }} />
                 <span style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#10b981' }} />
                 <span style={{ fontSize: '13px', color: '#64748b', marginLeft: '8px', fontFamily: 'monospace' }}>
-                  alex_vance.config.ts
+                  syed_abis.config.ts
                 </span>
               </div>
               <Terminal size={16} color="#38bdf8" />
@@ -176,7 +176,7 @@ export default function EngineerHero() {
             {/* Code Snippet Display */}
             <div style={{ fontFamily: 'monospace', fontSize: '13px', lineHeight: 1.7, color: '#cbd5e1' }}>
               <div><span style={{ color: '#c084fc' }}>const</span> <span style={{ color: '#38bdf8' }}>engineer</span> = &#123;</div>
-              <div style={{ paddingLeft: '20px' }}><span style={{ color: '#94a3b8' }}>name:</span> <span style={{ color: '#34d399' }}>'Alex Vance'</span>,</div>
+              <div style={{ paddingLeft: '20px' }}><span style={{ color: '#94a3b8' }}>name:</span> <span style={{ color: '#34d399' }}>'Syed Abis'</span>,</div>
               <div style={{ paddingLeft: '20px' }}><span style={{ color: '#94a3b8' }}>role:</span> <span style={{ color: '#34d399' }}>'Principal AI & Automation Architect'</span>,</div>
               <div style={{ paddingLeft: '20px' }}><span style={{ color: '#94a3b8' }}>agency:</span> <span style={{ color: '#34d399' }}>'Formiqa AI'</span>,</div>
               <div style={{ paddingLeft: '20px' }}><span style={{ color: '#94a3b8' }}>stack:</span> [</div>
