@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Cpu, Zap, Database, MessageSquare, Bot, Code, CheckCircle, ExternalLink, ArrowRight } from 'lucide-react';
+import { Code } from 'lucide-react';
 
 export default function EngineerProjects() {
   const projects = [
@@ -14,43 +14,43 @@ export default function EngineerProjects() {
       color: "#38bdf8"
     },
     {
-      title: "Vision OCR Invoice & Ledger Sync Engine",
-      category: "Finance & Accounting",
-      metrics: "99.8% Field Precision • 0 Manual Data Entry",
-      description: "Automated AP accounting pipeline. Scans complex PDF invoices using Claude 3.5 Sonnet Vision, validates PO numbers against ERP rules, and syncs reconciled entries into QuickBooks & Stripe API.",
-      stack: ["Claude 3.5 Sonnet", "Vision OCR", "QuickBooks API", "Stripe API"],
+      title: "24/7 Smart Customer Support Chatbot",
+      category: "Customer Support AI",
+      metrics: "<500ms Response • 88% Resolution",
+      description: "Context-aware multi-turn AI chatbot integrated with enterprise knowledge bases and CRM systems to resolve customer inquiries, troubleshoot issues, and escalate priority tickets automatically.",
+      stack: ["OpenAI API", "Pinecone DB", "LangChain", "Next.js"],
       color: "#c084fc"
     },
     {
-      title: "24/7 Conversational Voice AI Representative",
-      category: "Customer Support & Voice",
+      title: "Conversational Voice AI Phone Bot",
+      category: "Voice AI & Telephony",
       metrics: "<350ms Audio Latency • 1,200 Calls/Day",
       description: "Ultra-low-latency voice AI agent capable of handling live inbound client calls, answering dynamic FAQs, taking appointments, and executing real-time database lookups during phone conversations.",
-      stack: ["Retell AI", "Vapi API", "Twilio", "Python FastAPI"],
+      stack: ["Retell AI", "Vapi API", "Twilio Voice", "Python FastAPI"],
       color: "#34d399"
     },
     {
-      title: "Multi-Vector Enterprise RAG Engine",
-      category: "Knowledge Base AI",
-      metrics: "10M+ Documents Indexed • 99.4% Retrieval Accuracy",
-      description: "Custom hybrid search system combining semantic vector embeddings with keyword BM25 retrieval across millions of enterprise PDFs, Notion documents, and SQL database records.",
-      stack: ["Pinecone Vector DB", "LangChain", "Llama 3", "Supabase"],
+      title: "Social Media & Content Automation Engine",
+      category: "Marketing & Social AI",
+      metrics: "10x Content Output • 100% Automated",
+      description: "Autonomous multi-platform social media engine that generates branded post graphics, drafts engaging copy, optimizes publishing schedules, and monitors comments across LinkedIn, Twitter & Instagram.",
+      stack: ["Claude 3.5 Sonnet", "n8n Workflows", "Buffer API", "Canva API"],
       color: "#f59e0b"
     },
     {
-      title: "HR Resume Screening & Scoring Bot",
-      category: "Recruitment & Operations",
-      metrics: "85% Time Savings • 500+ Applicants / Hr",
+      title: "HR Resume Screening & Candidate Scoring Bot",
+      category: "HR & Talent Operations",
+      metrics: "85% Time Savings • 500+ Applicants/Hr",
       description: "Autonomous HR screening pipeline that extracts resume PDF text, evaluates candidates against strict job descriptions using custom rubric prompts, and schedules top talent interviews on Calendly.",
       stack: ["Python FastAPI", "OpenAI API", "Workday API", "Calendly"],
       color: "#ec4899"
     },
     {
-      title: "E-Commerce Review & Sentiment Analyzer",
-      category: "E-Commerce & Marketing",
-      metrics: "Real-time Escalation • 10k Reviews / Day",
-      description: "Continuous sentiment monitoring bot for Shopify stores. Categorizes customer product reviews, auto-responds to positive feedback, and dispatches urgent Slack alerts for critical support cases.",
-      stack: ["n8n Workflows", "Shopify API", "Slack Webhooks", "GPT-4o"],
+      title: "Smart Email Triaging & Auto-Responder Agent",
+      category: "Email & Workflow Automation",
+      metrics: "90% Inbox Reduction • Zero Delay",
+      description: "Enterprise email assistant that categorizes incoming inbox messages, drafts hyper-personalized responses, extracts key action items, and syncs follow-up reminders to Google Workspace & Slack.",
+      stack: ["Gmail API", "GPT-4o Vision", "Make.com", "Slack API"],
       color: "#6366f1"
     }
   ];
@@ -88,7 +88,7 @@ export default function EngineerProjects() {
             Featured Enterprise Projects
           </h2>
           <p style={{ fontSize: '17px', color: '#94a3b8', margin: 0 }}>
-            A curated portfolio of production-grade AI agents, RAG engines, and automated pipelines built for client organizations.
+            A curated portfolio of production-grade AI agents, voice bots, and automated pipelines built for client organizations.
           </p>
         </div>
 
