@@ -267,7 +267,7 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link href="#technology" style={{ color: '#a1a8b8', fontSize: '15px', fontWeight: 500, textDecoration: 'none', transition: 'color 0.2s ease' }}>
+            <Link href="/technology" style={{ color: '#a1a8b8', fontSize: '15px', fontWeight: 500, textDecoration: 'none', transition: 'color 0.2s ease' }}>
               Technology
             </Link>
 
@@ -332,7 +332,7 @@ export default function Navbar() {
           <Link href="/industries" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Industries</Link>
           <Link href="/solutions" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Solutions</Link>
           <Link href="#services" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Services</Link>
-          <Link href="#technology" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Technology</Link>
+          <Link href="/technology" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Technology</Link>
           <Link href="#faq" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Learn</Link>
           <Link href="#contact" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Contact</Link>
           <Link
