@@ -92,16 +92,25 @@ export default function Navbar() {
                   zIndex: 1000,
                   boxShadow: '0 20px 40px rgba(0,0,0,0.6)'
                 }}>
-                  <Link href="#solutions" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
+                  <Link href="/industries" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#60a5fa', fontSize: '14px', fontWeight: 600, borderRadius: '8px', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.08)', marginBottom: '6px' }} className="dropdown-item-hover">
+                    All Industries Overview →
+                  </Link>
+                  <Link href="/industries#professional-services" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
                     Professional Services
                   </Link>
-                  <Link href="#solutions" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
-                    Finance
+                  <Link href="/industries#finance" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
+                    Finance & FinTech
                   </Link>
-                  <Link href="#solutions" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
+                  <Link href="/industries#healthcare" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
+                    Healthcare & Life Sciences
+                  </Link>
+                  <Link href="/industries#real-estate" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
+                    Real Estate & Property
+                  </Link>
+                  <Link href="/industries#recruitment" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
                     Recruitment & HR
                   </Link>
-                  <Link href="#solutions" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
+                  <Link href="/industries#technology" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
                     Technology & Software
                   </Link>
                 </div>
@@ -142,17 +151,23 @@ export default function Navbar() {
                   zIndex: 1000,
                   boxShadow: '0 20px 40px rgba(0,0,0,0.6)'
                 }}>
-                  <Link href="#solutions" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
+                  <Link href="/solutions" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#c084fc', fontSize: '14px', fontWeight: 600, borderRadius: '8px', textDecoration: 'none', borderBottom: '1px solid rgba(255,255,255,0.08)', marginBottom: '6px' }} className="dropdown-item-hover">
+                    All Solutions Overview →
+                  </Link>
+                  <Link href="/solutions#sales" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
                     Sales Automations
                   </Link>
-                  <Link href="#solutions" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
+                  <Link href="/solutions#marketing" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
                     Marketing Journeys
                   </Link>
-                  <Link href="#solutions" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
+                  <Link href="/solutions#operations" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
                     Operations & Pipelines
                   </Link>
-                  <Link href="#solutions" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
-                    Customer Experience
+                  <Link href="/solutions#finance" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
+                    Finance & Revenue
+                  </Link>
+                  <Link href="/solutions#cx" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
+                    Customer Experience & Voice
                   </Link>
                 </div>
               )}
@@ -256,7 +271,7 @@ export default function Navbar() {
               Technology
             </Link>
 
-            <Link href="#contact" style={{ color: '#a1a8b8', fontSize: '15px', fontWeight: 500, textDecoration: 'none', transition: 'color 0.2s ease' }}>
+            <Link href="/contact" style={{ color: '#a1a8b8', fontSize: '15px', fontWeight: 500, textDecoration: 'none', transition: 'color 0.2s ease' }}>
               Contact
             </Link>
 
@@ -265,7 +280,7 @@ export default function Navbar() {
           {/* Right Side CTA */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
             <Link
-              href="#contact"
+              href="/contact"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -314,8 +329,8 @@ export default function Navbar() {
           flexDirection: 'column',
           gap: '16px'
         }}>
-          <Link href="#solutions" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Industries</Link>
-          <Link href="#solutions" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Solutions</Link>
+          <Link href="/industries" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Industries</Link>
+          <Link href="/solutions" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Solutions</Link>
           <Link href="#services" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Services</Link>
           <Link href="#technology" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Technology</Link>
           <Link href="#faq" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Learn</Link>

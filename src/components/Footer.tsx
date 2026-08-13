@@ -42,26 +42,29 @@ export default function Footer() {
           {/* Industries Column */}
           <div>
             <h4 style={{ fontSize: '15px', fontWeight: 600, color: '#ffffff', marginBottom: '20px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-              Industries
+              <Link href="/industries" style={{ color: '#ffffff', textDecoration: 'none' }}>Industries</Link>
             </h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              <li><Link href="#solutions" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Professional Services</Link></li>
-              <li><Link href="#solutions" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Finance</Link></li>
-              <li><Link href="#solutions" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Recruitment & HR</Link></li>
-              <li><Link href="#solutions" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Technology & Software</Link></li>
+              <li><Link href="/industries#professional-services" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Professional Services</Link></li>
+              <li><Link href="/industries#finance" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Finance & FinTech</Link></li>
+              <li><Link href="/industries#healthcare" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Healthcare & Life Sciences</Link></li>
+              <li><Link href="/industries#real-estate" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Real Estate & Property</Link></li>
+              <li><Link href="/industries#recruitment" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Recruitment & HR</Link></li>
+              <li><Link href="/industries#technology" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Technology & Software</Link></li>
             </ul>
           </div>
 
           {/* Solutions Column */}
           <div>
             <h4 style={{ fontSize: '15px', fontWeight: 600, color: '#ffffff', marginBottom: '20px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-              Solutions
+              <Link href="/solutions" style={{ color: '#ffffff', textDecoration: 'none' }}>Solutions</Link>
             </h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              <li><Link href="#solutions" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Sales Automations</Link></li>
-              <li><Link href="#solutions" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Marketing Journeys</Link></li>
-              <li><Link href="#solutions" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Operations & Pipelines</Link></li>
-              <li><Link href="#solutions" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Customer Experience</Link></li>
+              <li><Link href="/solutions#sales" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Sales Automations</Link></li>
+              <li><Link href="/solutions#marketing" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Marketing Journeys</Link></li>
+              <li><Link href="/solutions#operations" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Operations & Pipelines</Link></li>
+              <li><Link href="/solutions#finance" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Finance & Revenue</Link></li>
+              <li><Link href="/solutions#cx" style={{ color: '#94a3b8', fontSize: '14px', textDecoration: 'none' }}>Customer Experience</Link></li>
             </ul>
           </div>
 
