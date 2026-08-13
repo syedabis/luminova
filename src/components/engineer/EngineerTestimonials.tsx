@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Quote, Star, MessageSquare } from 'lucide-react';
+import { Star, MessageSquare } from 'lucide-react';
 
 export default function EngineerTestimonials() {
   const testimonials = [
@@ -25,11 +25,53 @@ export default function EngineerTestimonials() {
       role: "Founder & Lead Physician",
       company: "HealthPulse Medical",
       stars: 5
+    },
+    {
+      quote: "The real-time review sentiment and auto-refund pipeline transformed our e-commerce operations. We resolved 85% of refund disputes instantly with zero customer friction.",
+      author: "Sarah Jenkins",
+      role: "Head of Engineering",
+      company: "CommerceVibe Retail",
+      stars: 5
+    },
+    {
+      quote: "Alex's multi-agent workflow automated our field telemetry logging across 12 regional sites. His understanding of low-latency API architectures is exceptional.",
+      author: "Tariq Al-Mansoor",
+      role: "Chief Operating Officer",
+      company: "Saudi Energy Tech",
+      stars: 5
+    },
+    {
+      quote: "Document discovery used to take our paralegal team 30+ hours per case. The Pinecone RAG search system Alex deployed cut that to under 45 seconds with 100% citation accuracy.",
+      author: "Michael Chang",
+      role: "Partner & General Counsel",
+      company: "LegalPulse Partners",
+      stars: 5
     }
   ];
 
+  // Triplicate the 6 testimonials for a smooth continuous infinite auto loop
+  const loopTestimonials = [...testimonials, ...testimonials, ...testimonials];
+
   return (
-    <section style={{ padding: '90px 0', backgroundColor: '#010101', position: 'relative' }}>
+    <section style={{ padding: '90px 0', backgroundColor: '#010101', overflow: 'hidden', position: 'relative' }}>
+      
+      {/* Keyframe animation for continuous horizontal auto loop */}
+      <style jsx>{`
+        @keyframes marqueeTestimonials {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-33.333%); }
+        }
+        .reviews-marquee-track {
+          display: flex;
+          gap: 28px;
+          width: max-content;
+          animation: marqueeTestimonials 38s linear infinite;
+        }
+        .reviews-marquee-track:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
       <div className="container" style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px' }}>
         
         {/* Section Header */}
@@ -61,16 +103,27 @@ export default function EngineerTestimonials() {
             What Founders & CTOs Say
           </h2>
           <p style={{ fontSize: '16px', color: '#94a3b8', margin: 0 }}>
-            Direct feedback from business leaders whose operations are powered by Alex Vance's AI architectures.
+            Direct feedback from business leaders whose operations are powered by Alex Vance's AI architectures. Hover to pause auto-loop.
           </p>
         </div>
 
-        {/* 3 Testimonial Cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '28px' }}>
-          {testimonials.map((t, idx) => (
+      </div>
+
+      {/* Full Width Single Horizontal Auto-Loop Marquee Track */}
+      <div style={{
+        position: 'relative',
+        width: '100%',
+        overflow: 'hidden',
+        maskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
+        WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)'
+      }}>
+        <div className="reviews-marquee-track">
+          {loopTestimonials.map((t, idx) => (
             <div
               key={idx}
               style={{
+                width: '380px',
+                flexShrink: 0,
                 backgroundColor: 'rgba(255, 255, 255, 0.02)',
                 border: '1px solid rgba(255, 255, 255, 0.08)',
                 borderRadius: '24px',
@@ -88,7 +141,7 @@ export default function EngineerTestimonials() {
                   ))}
                 </div>
 
-                <p style={{ fontSize: '15px', color: '#e2e8f0', lineHeight: 1.65, fontStyle: 'italic', marginBottom: '28px' }}>
+                <p style={{ fontSize: '14px', color: '#e2e8f0', lineHeight: 1.65, fontStyle: 'italic', marginBottom: '28px' }}>
                   "{t.quote}"
                 </p>
               </div>
@@ -104,8 +157,8 @@ export default function EngineerTestimonials() {
             </div>
           ))}
         </div>
-
       </div>
+
     </section>
   );
 }
