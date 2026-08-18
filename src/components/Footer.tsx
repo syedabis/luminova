@@ -45,7 +45,7 @@ export default function Footer() {
                 <div className="loro-col-span-4" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   <Link href="/" style={{ display: 'inline-block' }}>
                     <img 
-                      src="/images/Cortexa icon 2.png" 
+                      src="/images/Cortexa icon 5.png" 
                       alt="Cortexa Logo" 
                       style={{ height: '44px', width: 'auto', opacity: 0.95 }}
                     />

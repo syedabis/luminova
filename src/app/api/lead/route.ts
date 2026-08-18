@@ -156,7 +156,8 @@ export async function POST(req: Request) {
 
     // Authenticate and append row
     const accessToken = await getAccessToken(clientEmail, privateKey);
-    await appendRowToGoogleSheet(accessToken, sheetId, "'Cortexa Leads'!A:G", rowValues);
+    const sheetName = process.env.GOOGLE_SHEET_NAME || 'Cortexa Leads';
+    await appendRowToGoogleSheet(accessToken, sheetId, `'${sheetName}'!A:G`, rowValues);
 
     return NextResponse.json({ success: true, message: 'Lead recorded successfully.' });
   } catch (error: any) {

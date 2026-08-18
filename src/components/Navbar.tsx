@@ -48,7 +48,7 @@ export default function Navbar() {
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <Link href="/">
               <img
-                src="/images/Cortexa icon 2.png"
+                src="/images/Cortexa icon 5.png"
                 alt="Cortexa Logo"
                 style={{ height: '44px', width: 'auto', display: 'block' }}
               />
