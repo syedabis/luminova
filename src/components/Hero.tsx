@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="container" style={{ maxWidth: '1080px', margin: '0 auto', textAlign: 'center', padding: '0 24px' }}>
         
         {/* Gradient Outline Badge */}
-        <div style={{ display: 'inline-block', marginBottom: '32px' }}>
+        <div className="hero-badge" style={{ display: 'inline-block', marginBottom: '32px', opacity: 0 }}>
           <div style={{
             padding: '1px',
             borderRadius: '100px',
@@ -35,40 +35,43 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 style={{
+        <h1 className="hero-heading" style={{
           fontSize: 'clamp(56px, 8.5vw, 108px)',
           fontWeight: 700,
           lineHeight: 1.04,
           color: '#ffffff',
           letterSpacing: '-0.035em',
-          marginBottom: '32px'
+          marginBottom: '32px',
+          opacity: 0
         }}>
           Align. Automate.<br />
           Accelerate.
         </h1>
 
         {/* Description */}
-        <p style={{
+        <p className="hero-desc" style={{
           fontSize: 'clamp(18px, 2.4vw, 24px)',
           lineHeight: 1.55,
           color: '#94a3b8',
           maxWidth: '840px',
           margin: '0 auto 16px auto',
-          fontWeight: 400
+          fontWeight: 400,
+          opacity: 0
         }}>
           We help B2B service teams streamline operations and grow revenue through AI-powered automation — reducing manual tasks, saving time and elevating the customer experience.
         </p>
 
       </div>
 
-      {/* Video Container (Cropped slightly from top to remove empty black margin) */}
-      <div style={{
+      {/* Video Container */}
+      <div className="hero-video-container" style={{
         width: '100%',
         maxWidth: '1280px',
         margin: '0 auto',
         position: 'relative',
         borderRadius: '24px',
-        padding: '0 24px'
+        padding: '0 24px',
+        opacity: 0
       }}>
         <div style={{
           position: 'relative',
@@ -99,3 +102,4 @@ export default function Hero() {
     </section>
   );
 }
+

@@ -29,7 +29,7 @@ export default function ContactHero() {
       <div className="container" style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px', position: 'relative', zIndex: 1 }}>
         
         {/* Top Badge */}
-        <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+        <div className="hero-badge" style={{ textAlign: 'center', marginBottom: '24px' }}>
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -48,7 +48,7 @@ export default function ContactHero() {
 
         {/* Hero Title & Subtitle */}
         <div style={{ textAlign: 'center', maxWidth: '880px', margin: '0 auto 48px auto' }}>
-          <h1 style={{
+          <h1 className="hero-heading" style={{
             fontSize: 'clamp(40px, 6vw, 68px)',
             fontWeight: 800,
             color: '#ffffff',
@@ -66,7 +66,7 @@ export default function ContactHero() {
             </span>
           </h1>
 
-          <p style={{
+          <p className="hero-desc" style={{
             fontSize: '18px',
             color: '#94a3b8',
             lineHeight: 1.6,
@@ -78,7 +78,7 @@ export default function ContactHero() {
         </div>
 
         {/* Quick Response Highlights Bar */}
-        <div style={{
+        <div className="hero-visual" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
           gap: '20px',

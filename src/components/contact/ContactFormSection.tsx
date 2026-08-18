@@ -20,6 +20,7 @@ export default function ContactFormSection() {
   const [activeTab, setActiveTab] = useState<'form' | 'calendar'>('form');
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -30,14 +31,33 @@ export default function ContactFormSection() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrorMessage('');
 
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setFormSubmitted(true);
+      } else {
+        setErrorMessage(data.error || 'Failed to submit form. Please try again.');
+      }
+    } catch (err) {
+      console.error('Submission error:', err);
+      setErrorMessage('A network error occurred. Please check your connection.');
+    } finally {
       setIsSubmitting(false);
-      setFormSubmitted(true);
-    }, 1200);
+    }
   };
 
   return (
@@ -329,6 +349,12 @@ export default function ContactFormSection() {
                       }}
                     />
                   </div>
+
+                  {errorMessage && (
+                    <div style={{ color: '#ef4444', fontSize: '14px', fontWeight: 600, marginBottom: '16px', textAlign: 'center' }}>
+                      {errorMessage}
+                    </div>
+                  )}
 
                   {/* Submit Button */}
                   <button

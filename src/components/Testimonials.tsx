@@ -183,7 +183,7 @@ export default function Testimonials() {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                transition: 'all 0.3s ease'
+                transition: 'border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease'
               }}
               className="hover-card-glow"
             >

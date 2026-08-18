@@ -41,7 +41,7 @@ export default function EngineerHero() {
           <div>
             
             {/* Status Pill Badge */}
-            <div style={{
+            <div className="hero-badge" style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
@@ -58,7 +58,7 @@ export default function EngineerHero() {
             </div>
 
             {/* Engineer Name & Headline */}
-            <h1 style={{
+            <h1 className="hero-heading" style={{
               fontSize: 'clamp(40px, 5.5vw, 64px)',
               fontWeight: 800,
               color: '#ffffff',
@@ -74,7 +74,7 @@ export default function EngineerHero() {
               I Build Autonomous AI Systems.
             </h1>
 
-            <p style={{
+            <p className="hero-desc" style={{
               fontSize: '18px',
               color: '#94a3b8',
               lineHeight: 1.6,
@@ -85,9 +85,10 @@ export default function EngineerHero() {
             </p>
 
             {/* CTA Action Buttons */}
-            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '48px' }}>
+            <div className="feature-1-wrap" style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '48px' }}>
               <a
                 href="#projects"
+                className="hero-btn"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -108,6 +109,7 @@ export default function EngineerHero() {
 
               <a
                 href="#engineer-contact"
+                className="hero-btn"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -152,7 +154,7 @@ export default function EngineerHero() {
           </div>
 
           {/* Right Column: Code & Terminal Spec Card */}
-          <div style={{
+          <div className="hero-visual" style={{
             backgroundColor: '#0a0d14',
             border: '1px solid rgba(255, 255, 255, 0.1)',
             borderRadius: '24px',

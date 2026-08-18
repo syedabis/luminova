@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import LogoLoop from './LogoLoop';
 
 export default function Technology() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -33,39 +34,8 @@ export default function Technology() {
   const row1Items = filteredTools.slice(0, half > 0 ? half : 1);
   const row2Items = filteredTools.slice(half);
 
-  // Repeat items so marquee loop is seamless
-  const row1Loop = [...row1Items, ...row1Items, ...row1Items, ...row1Items];
-  const row2Loop = [...(row2Items.length ? row2Items : row1Items), ...(row2Items.length ? row2Items : row1Items), ...(row2Items.length ? row2Items : row1Items), ...(row2Items.length ? row2Items : row1Items)];
-
   return (
     <section id="technology" className="section-xl" style={{ padding: '100px 0', backgroundColor: '#010101', overflow: 'hidden' }}>
-      
-      {/* Inline styles for keyframe marquee animation */}
-      <style jsx>{`
-        @keyframes marqueeLeft {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-50%); }
-        }
-        @keyframes marqueeRight {
-          0% { transform: translateX(-50%); }
-          100% { transform: translateX(0%); }
-        }
-        .marquee-track-left {
-          display: flex;
-          gap: 16px;
-          width: max-content;
-          animation: marqueeLeft 35s linear infinite;
-        }
-        .marquee-track-right {
-          display: flex;
-          gap: 16px;
-          width: max-content;
-          animation: marqueeRight 35s linear infinite;
-        }
-        .marquee-track-left:hover, .marquee-track-right:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
 
       <div className="container" style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px' }}>
         
@@ -94,7 +64,7 @@ export default function Technology() {
                 fontSize: '14px',
                 fontWeight: 600,
                 cursor: 'pointer',
-                transition: 'all 0.2s ease'
+                transition: 'background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease'
               }}
             >
               {cat}
@@ -111,16 +81,20 @@ export default function Technology() {
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
-        gap: '16px',
-        maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
-        WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)'
+        gap: '16px'
       }}>
         
         {/* Row 1: Left Auto Loop */}
-        <div className="marquee-track-left">
-          {row1Loop.map((tool, idx) => (
+        <LogoLoop
+          logos={row1Items}
+          direction="left"
+          speed={60}
+          logoHeight={58}
+          gap={16}
+          fadeOut
+          fadeOutColor="#010101"
+          renderItem={(tool) => (
             <div
-              key={idx}
               style={{
                 backgroundColor: 'rgba(255, 255, 255, 0.04)',
                 border: '1px solid rgba(255, 255, 255, 0.08)',
@@ -130,7 +104,7 @@ export default function Technology() {
                 alignItems: 'center',
                 gap: '14px',
                 whiteSpace: 'nowrap',
-                flexShrink: 0
+                height: '56px'
               }}
             >
               <img
@@ -142,14 +116,20 @@ export default function Technology() {
                 {tool.name}
               </span>
             </div>
-          ))}
-        </div>
+          )}
+        />
 
         {/* Row 2: Right Auto Loop */}
-        <div className="marquee-track-right">
-          {row2Loop.map((tool, idx) => (
+        <LogoLoop
+          logos={row2Items.length ? row2Items : row1Items}
+          direction="right"
+          speed={60}
+          logoHeight={58}
+          gap={16}
+          fadeOut
+          fadeOutColor="#010101"
+          renderItem={(tool) => (
             <div
-              key={idx}
               style={{
                 backgroundColor: 'rgba(255, 255, 255, 0.04)',
                 border: '1px solid rgba(255, 255, 255, 0.08)',
@@ -159,7 +139,7 @@ export default function Technology() {
                 alignItems: 'center',
                 gap: '14px',
                 whiteSpace: 'nowrap',
-                flexShrink: 0
+                height: '56px'
               }}
             >
               <img
@@ -171,8 +151,8 @@ export default function Technology() {
                 {tool.name}
               </span>
             </div>
-          ))}
-        </div>
+          )}
+        />
 
       </div>
 

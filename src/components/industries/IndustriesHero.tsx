@@ -48,7 +48,7 @@ export default function IndustriesHero({ onSelectCategory, activeCategory }: Ind
         <div style={{ textAlign: 'center', maxWidth: '920px', margin: '0 auto 48px auto' }}>
           
           {/* Badge */}
-          <div style={{ display: 'inline-block', marginBottom: '28px' }}>
+          <div className="hero-badge" style={{ display: 'inline-block', marginBottom: '28px' }}>
             <div style={{
               padding: '1px',
               borderRadius: '100px',
@@ -72,7 +72,7 @@ export default function IndustriesHero({ onSelectCategory, activeCategory }: Ind
           </div>
 
           {/* Headline */}
-          <h1 style={{
+          <h1 className="hero-heading" style={{
             fontSize: 'clamp(44px, 7.5vw, 84px)',
             fontWeight: 800,
             lineHeight: 1.06,
@@ -91,7 +91,7 @@ export default function IndustriesHero({ onSelectCategory, activeCategory }: Ind
           </h1>
 
           {/* Subheading */}
-          <p style={{
+          <p className="hero-desc" style={{
             fontSize: 'clamp(17px, 2.2vw, 22px)',
             lineHeight: 1.6,
             color: '#94a3b8',
@@ -105,7 +105,7 @@ export default function IndustriesHero({ onSelectCategory, activeCategory }: Ind
         </div>
 
         {/* Quick Filter Pills */}
-        <div style={{
+        <div className="feature-1-wrap" style={{
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: 'center',
@@ -142,7 +142,7 @@ export default function IndustriesHero({ onSelectCategory, activeCategory }: Ind
         </div>
 
         {/* Key Metrics / Highlights Bar */}
-        <div style={{
+        <div className="hero-visual" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
           gap: '20px',

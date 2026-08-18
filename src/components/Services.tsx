@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { ArrowRight, Bot, Cpu, Database, Eye, Users, PhoneCall, Check } from 'lucide-react';
+import DepthCarousel from './DepthCarousel';
 
 export default function Services() {
   const projects = [
@@ -85,28 +86,8 @@ export default function Services() {
     }
   ];
 
-  // Repeat array for seamless infinite marquee loop
-  const loopProjects = [...projects, ...projects, ...projects];
-
   return (
     <section id="services" className="section-xl" style={{ padding: '100px 0', backgroundColor: '#010101', overflow: 'hidden' }}>
-      
-      {/* CSS Keyframes for Single Row Continuous Horizontal Marquee Loop */}
-      <style jsx>{`
-        @keyframes singleRowMarquee {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-33.333%); }
-        }
-        .single-row-marquee-track {
-          display: flex;
-          gap: 20px;
-          width: max-content;
-          animation: singleRowMarquee 40s linear infinite;
-        }
-        .single-row-marquee-track:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
 
       <div className="container" style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px' }}>
         
@@ -165,128 +146,142 @@ export default function Services() {
 
       </div>
 
-      {/* Single Row Continuous Auto Horizontal Loop Container */}
-      <div style={{
-        position: 'relative',
-        width: '100%',
-        overflow: 'hidden',
-        marginBottom: '56px',
-        maskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)',
-        WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%)'
-      }}>
-        <div className="single-row-marquee-track">
-          {loopProjects.map((item, idx) => (
-            <div
-              key={idx}
-              style={{
-                width: '380px',
-                flexShrink: 0,
-                backgroundColor: 'rgba(255, 255, 255, 0.025)',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
-                borderRadius: '16px',
-                padding: '28px 24px',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                transition: 'border-color 0.3s ease, transform 0.3s ease',
-                cursor: 'pointer',
-                minHeight: '380px'
-              }}
-              className="hover-card-glow"
-            >
-              {/* Card Top: Category & Badge */}
-              <div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px', gap: '8px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    {item.icon}
-                    <span style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.06em', color: '#64748b', textTransform: 'uppercase' }}>
-                      {item.category}
-                    </span>
-                  </div>
-
-                  <span style={{
-                    fontSize: '11px',
-                    fontWeight: 600,
-                    backgroundColor: item.badgeBg,
-                    color: item.badgeColor,
-                    border: `1px solid ${item.badgeBorder}`,
-                    padding: '3px 10px',
-                    borderRadius: '100px',
-                    whiteSpace: 'nowrap'
-                  }}>
-                    {item.badge}
-                  </span>
-                </div>
-
-                {/* Card Title */}
-                <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: 700,
-                  color: '#ffffff',
-                  marginBottom: '12px',
-                  lineHeight: 1.3
-                }}>
-                  {item.title}
-                </h3>
-
-                {/* Card Description */}
-                <p style={{
-                  fontSize: '13px',
-                  color: '#94a3b8',
-                  lineHeight: 1.6,
-                  marginBottom: '24px',
-                  fontWeight: 400
-                }}>
-                  {item.desc}
-                </p>
-              </div>
-
-              {/* Card Bottom: Tech Stack Tags & Footer Meta */}
-              <div>
-                {/* Tech Tags */}
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '20px' }}>
-                  {item.tags.map((tag, tIdx) => (
-                    <span
-                      key={tIdx}
-                      style={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                        border: '1px solid rgba(255, 255, 255, 0.08)',
-                        color: '#cbd5e1',
-                        fontSize: '11px',
-                        padding: '3px 8px',
-                        borderRadius: '6px',
-                        fontWeight: 500
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Footer Divider */}
-                <div style={{
-                  borderTop: '1px solid rgba(255, 255, 255, 0.06)',
-                  paddingTop: '14px',
+      <div style={{ height: '650px', position: 'relative', marginBottom: '56px' }}>
+        <DepthCarousel
+          cardWidth={380}
+          cardHeight={520}
+          items={projects.map((item, i) => {
+            const images = [
+              'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800',
+              'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
+              'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800',
+              'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800',
+              'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
+              'https://images.unsplash.com/photo-1589254065878-42c9da997008?auto=format&fit=crop&q=80&w=800'
+            ];
+            const imgSrc = images[i % images.length];
+            
+            return (
+              <div
+                key={i}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  backgroundColor: '#0b0d12', // Solid opaque background to occlude cards behind it in the 3D stack
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  borderRadius: '16px',
+                  overflow: 'hidden',
                   display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between'
-                }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <Check size={14} color={item.footerTagColor} />
-                    <span style={{ fontSize: '12px', color: item.footerTagColor, fontWeight: 600 }}>
-                      {item.footerTag}
-                    </span>
-                  </div>
-
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#94a3b8', fontSize: '12px', fontWeight: 600 }}>
-                    View Solution <ArrowRight size={13} />
-                  </div>
+                  flexDirection: 'column'
+                }}
+                className="hover-card-glow"
+              >
+                {/* Top Half: Image */}
+                <div style={{ height: '210px', width: '100%', position: 'relative', borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
+                  <img 
+                    src={imgSrc} 
+                    alt={item.title} 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                    draggable={false}
+                  />
                 </div>
 
+                {/* Bottom Half: Info */}
+                <div style={{ padding: '24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flex: 1 }}>
+                  {/* Card Top: Category & Badge */}
+                  <div>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px', gap: '8px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        {item.icon}
+                        <span style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.06em', color: '#64748b', textTransform: 'uppercase' }}>
+                          {item.category}
+                        </span>
+                      </div>
+
+                      <span style={{
+                        fontSize: '11px',
+                        fontWeight: 600,
+                        backgroundColor: item.badgeBg,
+                        color: item.badgeColor,
+                        border: `1px solid ${item.badgeBorder}`,
+                        padding: '3px 10px',
+                        borderRadius: '100px',
+                        whiteSpace: 'nowrap'
+                      }}>
+                        {item.badge}
+                      </span>
+                    </div>
+
+                    {/* Card Title */}
+                    <h3 style={{
+                      fontSize: '17px',
+                      fontWeight: 700,
+                      color: '#ffffff',
+                      marginBottom: '10px',
+                      lineHeight: 1.3
+                    }}>
+                      {item.title}
+                    </h3>
+
+                    {/* Card Description */}
+                    <p style={{
+                      fontSize: '13px',
+                      color: '#94a3b8',
+                      lineHeight: 1.5,
+                      marginBottom: '16px',
+                      fontWeight: 400
+                    }}>
+                      {item.desc}
+                    </p>
+                  </div>
+
+                  {/* Card Bottom: Tech Stack Tags & Footer Meta */}
+                  <div>
+                    {/* Tech Tags */}
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '16px' }}>
+                      {((item.tags || []) as string[]).map((tag: string, tIdx: number) => (
+                        <span
+                          key={tIdx}
+                          style={{
+                            backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                            border: '1px solid rgba(255, 255, 255, 0.08)',
+                            color: '#cbd5e1',
+                            fontSize: '11px',
+                            padding: '3px 8px',
+                            borderRadius: '6px',
+                            fontWeight: 500
+                          }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Footer Divider */}
+                    <div style={{
+                      borderTop: '1px solid rgba(255, 255, 255, 0.06)',
+                      paddingTop: '14px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between'
+                    }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <Check size={14} color={item.footerTagColor} />
+                        <span style={{ fontSize: '12px', color: item.footerTagColor, fontWeight: 600 }}>
+                          {item.footerTag}
+                        </span>
+                      </div>
+
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#94a3b8', fontSize: '12px', fontWeight: 600 }}>
+                        View Solution <ArrowRight size={13} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            );
+          })}
+        />
       </div>
 
       {/* Bottom CTA Button */}

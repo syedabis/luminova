@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageSquare, X, Send, Bot, User, Sparkles, Loader2 } from 'lucide-react';
+import { X, Send, Bot, Sparkles, Loader2 } from 'lucide-react';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -13,7 +13,7 @@ export default function ChatWidget() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: 'Hello! I am Formiqa AI Assistant. How can I help you automate your business workflows today?'
+      content: 'Hello! I am Cortexa’s AI Assistant. How can I help you automate workflows, scale operations, or build AI applications today?'
     }
   ]);
   const [input, setInput] = useState('');
@@ -96,7 +96,7 @@ export default function ChatWidget() {
   };
 
   const suggestions = [
-    "What services does Formiqa offer?",
+    "What services does Cortexa offer?",
     "How long does AI automation take?",
     "Can you build a custom RAG bot?"
   ];
@@ -104,7 +104,7 @@ export default function ChatWidget() {
   return (
     <div style={{ position: 'fixed', bottom: '30px', right: '30px', zIndex: 99999 }}>
       
-      {/* Floating Trigger Button */}
+      {/* Floating Trigger Button with pulsing shadow and hover scaling */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
@@ -112,30 +112,30 @@ export default function ChatWidget() {
             width: '64px',
             height: '64px',
             borderRadius: '50%',
-            backgroundColor: '#0f172a',
-            border: '2px solid rgba(16, 185, 129, 0.6)',
-            boxShadow: '0 10px 30px rgba(16, 185, 129, 0.35)',
+            backgroundColor: '#090b10',
+            border: '2px solid rgba(16, 185, 129, 0.5)',
+            boxShadow: '0 10px 30px rgba(16, 185, 129, 0.25)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'pointer',
             position: 'relative',
-            transition: 'transform 0.25s ease, box-shadow 0.25s ease'
+            transition: 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease'
           }}
-          className="hover:scale-105"
+          className="hover:scale-110 chat-floating-btn hover-card-glow"
           aria-label="Open AI Assistant"
         >
           <div style={{
             position: 'absolute',
             top: '4px',
             right: '4px',
-            width: '12px',
-            height: '12px',
+            width: '10px',
+            height: '10px',
             borderRadius: '50%',
             backgroundColor: '#10b981',
-            boxShadow: '0 0 10px #10b981'
+            boxShadow: '0 0 12px #10b981'
           }} />
-          <Bot size={28} color="#10b981" />
+          <img src="/images/asset_53_6858f95b4522ba945ca91454_Logo-markv2.svg" alt="Cortexa AI" width={28} height={28} />
         </button>
       )}
 
@@ -144,34 +144,52 @@ export default function ChatWidget() {
         <div style={{
           width: '380px',
           maxWidth: 'calc(100vw - 40px)',
-          height: '560px',
+          height: '580px',
           maxHeight: 'calc(100vh - 100px)',
-          backgroundColor: '#090b10',
-          border: '1px solid rgba(255, 255, 255, 0.12)',
+          backgroundColor: 'rgba(9, 11, 16, 0.82)',
+          backdropFilter: 'blur(20px)',
+          WebkitBackdropFilter: 'blur(20px)',
+          border: '1px solid rgba(255, 255, 255, 0.08)',
           borderRadius: '24px',
-          boxShadow: '0 25px 60px rgba(0, 0, 0, 0.8)',
+          boxShadow: '0 25px 60px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255,255,255,0.05)',
           display: 'flex',
           flexDirection: 'column',
           overflow: 'hidden',
-          animation: 'fadeInUp 0.3s ease-out'
+          animation: 'fadeInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+          position: 'relative'
         }}>
           
+          {/* Ambient Glow at the top left */}
+          <div style={{
+            position: 'absolute',
+            top: '-100px',
+            left: '-100px',
+            width: '260px',
+            height: '260px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, rgba(16, 185, 129, 0) 70%)',
+            pointerEvents: 'none',
+            zIndex: 0
+          }} />
+
           {/* Header */}
           <div style={{
             padding: '18px 24px',
-            backgroundColor: 'rgba(15, 23, 42, 0.9)',
+            backgroundColor: 'rgba(15, 23, 42, 0.4)',
             borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'space-between'
+            justifyContent: 'space-between',
+            position: 'relative',
+            zIndex: 1
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <div style={{
                 width: '36px',
                 height: '36px',
                 borderRadius: '10px',
-                backgroundColor: 'rgba(16, 185, 129, 0.15)',
-                border: '1px solid rgba(16, 185, 129, 0.3)',
+                backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                border: '1px solid rgba(16, 185, 129, 0.2)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center'
@@ -179,13 +197,13 @@ export default function ChatWidget() {
                 <Sparkles size={18} color="#10b981" />
               </div>
               <div>
-                <h4 style={{ fontSize: '15px', fontWeight: 700, color: '#ffffff', margin: 0 }}>
-                  Formiqa AI
+                <h4 style={{ fontSize: '15px', fontWeight: 700, color: '#ffffff', margin: 0, letterSpacing: '-0.01em' }}>
+                  Cortexa AI
                 </h4>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                   <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#10b981' }} />
                   <span style={{ fontSize: '11px', color: '#94a3b8', fontWeight: 500 }}>
-                    Powered by Gemini 3.0
+                    Powered by Cortexa Brain
                   </span>
                 </div>
               </div>
@@ -198,14 +216,16 @@ export default function ChatWidget() {
                 border: 'none',
                 color: '#94a3b8',
                 cursor: 'pointer',
-                padding: '4px',
-                borderRadius: '6px',
+                padding: '6px',
+                borderRadius: '50%',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                transition: 'background-color 0.2s ease, color 0.2s'
               }}
+              className="hover:bg-white/10 hover:text-white"
             >
-              <X size={20} />
+              <X size={18} />
             </button>
           </div>
 
@@ -216,8 +236,10 @@ export default function ChatWidget() {
             overflowY: 'auto',
             display: 'flex',
             flexDirection: 'column',
-            gap: '16px'
-          }}>
+            gap: '16px',
+            position: 'relative',
+            zIndex: 1
+          }} className="scroll-expand--scroller">
             {messages.map((msg, index) => (
               <div
                 key={index}
@@ -232,14 +254,15 @@ export default function ChatWidget() {
                     width: '28px',
                     height: '28px',
                     borderRadius: '50%',
-                    backgroundColor: 'rgba(16, 185, 129, 0.15)',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    border: '1px solid rgba(16, 185, 129, 0.15)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
                     marginTop: '2px'
                   }}>
-                    <Bot size={15} color="#10b981" />
+                    <img src="/images/asset_53_6858f95b4522ba945ca91454_Logo-markv2.svg" alt="Cortexa" width={16} height={16} />
                   </div>
                 )}
 
@@ -247,7 +270,8 @@ export default function ChatWidget() {
                   maxWidth: '80%',
                   padding: '12px 16px',
                   borderRadius: msg.role === 'user' ? '18px 18px 4px 18px' : '18px 18px 18px 4px',
-                  backgroundColor: msg.role === 'user' ? '#10b981' : 'rgba(255, 255, 255, 0.05)',
+                  backgroundColor: msg.role === 'user' ? '#10b981' : 'rgba(255, 255, 255, 0.04)',
+                  border: msg.role === 'user' ? 'none' : '1px solid rgba(255, 255, 255, 0.06)',
                   color: msg.role === 'user' ? '#010101' : '#e2e8f0',
                   fontSize: '14px',
                   lineHeight: 1.5,
@@ -266,15 +290,16 @@ export default function ChatWidget() {
                   width: '28px',
                   height: '28px',
                   borderRadius: '50%',
-                  backgroundColor: 'rgba(16, 185, 129, 0.15)',
+                  backgroundColor: 'rgba(16, 185, 129, 0.1)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center'
                 }}>
-                  <Bot size={15} color="#10b981" />
+                  <img src="/images/asset_53_6858f95b4522ba945ca91454_Logo-markv2.svg" alt="Cortexa" width={16} height={16} />
                 </div>
                 <div style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                  backgroundColor: 'rgba(255, 255, 255, 0.04)',
+                  border: '1px solid rgba(255, 255, 255, 0.06)',
                   padding: '12px 16px',
                   borderRadius: '18px 18px 18px 4px',
                   display: 'flex',
@@ -284,7 +309,7 @@ export default function ChatWidget() {
                   fontSize: '13px'
                 }}>
                   <Loader2 size={16} className="animate-spin" color="#10b981" />
-                  Thinking...
+                  Formulating...
                 </div>
               </div>
             )}
@@ -294,8 +319,8 @@ export default function ChatWidget() {
 
           {/* Quick Suggestion Chips (when 1 message) */}
           {messages.length === 1 && !loading && (
-            <div style={{ padding: '0 16px 12px 16px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-              <span style={{ fontSize: '11px', color: '#64748b', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+            <div style={{ padding: '0 20px 16px 20px', display: 'flex', flexDirection: 'column', gap: '8px', position: 'relative', zIndex: 1 }}>
+              <span style={{ fontSize: '10px', color: '#64748b', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                 Suggested Questions
               </span>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
@@ -305,15 +330,17 @@ export default function ChatWidget() {
                     onClick={() => handleSend(s)}
                     style={{
                       textAlign: 'left',
-                      backgroundColor: 'rgba(255, 255, 255, 0.04)',
-                      border: '1px solid rgba(255, 255, 255, 0.08)',
-                      borderRadius: '8px',
-                      padding: '8px 12px',
+                      backgroundColor: 'rgba(255, 255, 255, 0.03)',
+                      border: '1px solid rgba(255, 255, 255, 0.06)',
+                      borderRadius: '10px',
+                      padding: '10px 14px',
                       fontSize: '12px',
                       color: '#cbd5e1',
                       cursor: 'pointer',
-                      transition: 'all 0.2s ease'
+                      transition: 'all 0.2s ease',
+                      fontWeight: 500
                     }}
+                    className="hover:bg-white/10 hover:border-white/15"
                   >
                     {s}
                   </button>
@@ -325,28 +352,32 @@ export default function ChatWidget() {
           {/* Input Bar */}
           <div style={{
             padding: '14px 16px',
-            backgroundColor: 'rgba(15, 23, 42, 0.95)',
+            backgroundColor: 'rgba(15, 23, 42, 0.7)',
             borderTop: '1px solid rgba(255, 255, 255, 0.08)',
             display: 'flex',
             alignItems: 'center',
-            gap: '10px'
+            gap: '10px',
+            position: 'relative',
+            zIndex: 1
           }}>
             <input
               type="text"
-              placeholder="Ask Formiqa AI..."
+              placeholder="Ask Cortexa AI..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSend()}
               style={{
                 flex: 1,
-                backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
+                backgroundColor: 'rgba(255, 255, 255, 0.04)',
+                border: '1px solid rgba(255, 255, 255, 0.08)',
                 borderRadius: '100px',
-                padding: '10px 18px',
+                padding: '11px 18px',
                 fontSize: '13px',
                 color: '#ffffff',
-                outline: 'none'
+                outline: 'none',
+                transition: 'border-color 0.2s'
               }}
+              className="focus:border-emerald-500/50"
             />
             <button
               onClick={() => handleSend()}
@@ -355,14 +386,15 @@ export default function ChatWidget() {
                 width: '38px',
                 height: '38px',
                 borderRadius: '50%',
-                backgroundColor: input.trim() && !loading ? '#10b981' : 'rgba(255, 255, 255, 0.1)',
+                backgroundColor: input.trim() && !loading ? '#10b981' : 'rgba(255, 255, 255, 0.05)',
                 border: 'none',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 cursor: input.trim() && !loading ? 'pointer' : 'not-allowed',
-                transition: 'background-color 0.2s ease'
+                transition: 'background-color 0.2s ease, transform 0.1s'
               }}
+              className={input.trim() && !loading ? 'hover:scale-105 active:scale-95' : ''}
             >
               <Send size={16} color={input.trim() && !loading ? '#010101' : '#64748b'} />
             </button>

@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans, Inter } from 'next/font/google';
+import { Plus_Jakarta_Sans, Inter, Comfortaa } from 'next/font/google';
 import './globals.css';
+import './custom.css';
 import SmoothScroll from '@/components/SmoothScroll';
+import PageAnimations from '@/components/PageAnimations';
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -15,6 +17,13 @@ const inter = Inter({
   weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
   variable: '--font-inter',
+});
+
+const comfortaa = Comfortaa({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-comfortaa',
 });
 
 export const metadata: Metadata = {
@@ -31,15 +40,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} ${inter.variable} w-mod-js`}>
+    <html lang="en" className={`${plusJakarta.variable} ${inter.variable} ${comfortaa.variable} w-mod-js`}>
       <head>
         <link rel="icon" href="/images/asset_53_6858f95b4522ba945ca91454_Logo-markv2.svg" />
       </head>
-      <body className={`${plusJakarta.className} body background-colour-b text-colour-a`}>
+      <body className={`${comfortaa.className} body background-colour-b text-colour-a`}>
         <SmoothScroll>
           {children}
         </SmoothScroll>
+        <PageAnimations />
       </body>
     </html>
   );
 }
+

@@ -5,15 +5,49 @@ import { ArrowRight, CheckCircle2, Cpu, ShieldCheck } from 'lucide-react';
 
 export default function TechCTA() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     techStack: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          fullName: formData.name,
+          email: formData.email,
+          company: 'N/A (Tech Audit)',
+          industry: 'Enterprise Architecture Audit',
+          budget: 'N/A',
+          message: formData.techStack
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMessage(data.error || 'Failed to submit form. Please try again.');
+      }
+    } catch (err) {
+      console.error('Submission error:', err);
+      setErrorMessage('A network error occurred. Please check your connection.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -90,6 +124,22 @@ export default function TechCTA() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} style={{ maxWidth: '640px', margin: '0 auto' }}>
+              
+              {errorMessage && (
+                <div style={{ 
+                  padding: '12px 16px', 
+                  backgroundColor: 'rgba(239, 68, 68, 0.1)', 
+                  border: '1px solid rgba(239, 68, 68, 0.2)', 
+                  borderRadius: '8px', 
+                  color: '#f87171', 
+                  fontSize: '14px', 
+                  marginBottom: '20px',
+                  textAlign: 'center'
+                }}>
+                  {errorMessage}
+                </div>
+              )}
+
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginBottom: '20px' }}>
                 <div>
                   <label style={{ display: 'block', fontSize: '13px', fontWeight: 600, color: '#cbd5e1', marginBottom: '8px' }}>Your Name *</label>
@@ -158,6 +208,7 @@ export default function TechCTA() {
 
               <button
                 type="submit"
+                disabled={isSubmitting}
                 style={{
                   width: '100%',
                   backgroundColor: '#38bdf8',
@@ -167,17 +218,18 @@ export default function TechCTA() {
                   padding: '16px',
                   fontSize: '16px',
                   fontWeight: 800,
-                  cursor: 'pointer',
+                  cursor: isSubmitting ? 'not-allowed' : 'pointer',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   gap: '10px',
                   boxShadow: '0 8px 25px rgba(56, 189, 248, 0.3)',
-                  transition: 'all 0.3s ease'
+                  transition: 'all 0.3s ease',
+                  opacity: isSubmitting ? 0.7 : 1
                 }}
               >
-                Request Architecture Feasibility Session
-                <ArrowRight size={18} />
+                {isSubmitting ? 'Requesting Session...' : 'Request Architecture Feasibility Session'}
+                {!isSubmitting && <ArrowRight size={18} />}
               </button>
             </form>
           )}

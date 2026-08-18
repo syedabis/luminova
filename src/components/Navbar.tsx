@@ -48,9 +48,9 @@ export default function Navbar() {
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <Link href="/">
               <img
-                src="/images/asset_2_685639011aed581e24280e05_Logo-flat.svg"
-                alt="Formiqa Logo"
-                style={{ height: '32px', width: 'auto', display: 'block' }}
+                src="/images/Cortexa icon 2.png"
+                alt="Cortexa Logo"
+                style={{ height: '44px', width: 'auto', display: 'block' }}
               />
             </Link>
           </div>

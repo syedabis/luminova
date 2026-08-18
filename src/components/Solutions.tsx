@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import SpotlightCard from './SpotlightCard';
 
 export default function Solutions() {
   const solutions = [
@@ -73,19 +74,10 @@ export default function Solutions() {
         {/* 3x2 Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '24px' }}>
           {solutions.map((item, idx) => (
-            <div
+            <SpotlightCard
               key={idx}
-              style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                border: '1px solid rgba(255, 255, 255, 0.07)',
-                borderRadius: '16px',
-                padding: '40px 36px',
-                display: 'flex',
-                flexDirection: 'column',
-                transition: 'all 0.25s ease-in-out',
-                cursor: 'pointer'
-              }}
-              className="hover-card-glow"
+              className="custom-spotlight-card"
+              spotlightColor="rgba(16, 185, 129, 0.2)"
             >
               {/* Category Tag */}
               <span style={{
@@ -122,7 +114,7 @@ export default function Solutions() {
               }}>
                 {item.desc}
               </p>
-            </div>
+            </SpotlightCard>
           ))}
         </div>
 
