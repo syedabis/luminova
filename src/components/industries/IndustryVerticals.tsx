@@ -357,7 +357,7 @@ export default function IndustryVerticals({ selectedCategory = 'all' }: Industry
 
                       <div style={{ backgroundColor: 'rgba(16, 185, 129, 0.06)', border: '1px solid rgba(16, 185, 129, 0.2)', padding: '18px 20px', borderRadius: '12px' }}>
                         <div style={{ fontSize: '12px', fontWeight: 800, color: '#34d399', textTransform: 'uppercase', marginBottom: '8px' }}>
-                          Formiqa AI Automated State
+                          Cortexa AI Automated State
                         </div>
                         <p style={{ fontSize: '14px', color: '#cbd5e1', margin: 0, lineHeight: 1.5 }}>
                           {item.beforeAfter.after}

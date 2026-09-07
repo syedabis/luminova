@@ -137,7 +137,7 @@ export default function CTA() {
           }}>
             
             <span style={{ fontSize: '13px', fontWeight: 700, letterSpacing: '0.08em', color: '#60a5fa', textTransform: 'uppercase', marginBottom: '16px', display: 'block' }}>
-              THE FORMIQA APPROACH
+              THE CORTEXA APPROACH
             </span>
 
             <h2 style={{ fontSize: 'clamp(22px, 3.5vw, 38px)', fontWeight: 700, color: '#ffffff', lineHeight: 1.3, marginBottom: '24px' }}>
@@ -145,7 +145,7 @@ export default function CTA() {
             </h2>
 
             <p style={{ fontSize: '16px', color: '#cbd5e1', lineHeight: 1.7, marginBottom: '24px', maxWidth: '780px', margin: '0 auto 24px auto' }}>
-              Formiqa is inspired by the Latin word <i>formica</i>, meaning ant — a symbol of intelligent systems, collaboration and efficiency. The name reflects our focus on building seamless, scalable automations that power complex operations behind the scenes.
+              Cortexa is inspired by intelligent neural architecture — a symbol of adaptive systems, collaboration and efficiency. The name reflects our focus on building seamless, scalable automations that power complex operations behind the scenes.
             </p>
 
             <p style={{ fontSize: '14px', color: '#94a3b8', lineHeight: 1.6, marginBottom: '40px', maxWidth: '720px', margin: '0 auto 40px auto' }}>
@@ -154,7 +154,7 @@ export default function CTA() {
 
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <Link
-                href="mailto:hello@formiqa.io"
+                href="mailto:hello@cortexastudios.com"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',

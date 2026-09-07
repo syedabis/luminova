@@ -18,7 +18,7 @@ export default function IndustryCaseStudies() {
         "$140,000 annual billable capacity reclaimed",
         "Zero error rate in contract clause selection"
       ],
-      quote: "Formiqa transformed our operational workflow. What used to take our paralegals 3 days now happens automatically before our first client kickoff call.",
+      quote: "Cortexa transformed our operational workflow. What used to take our paralegals 3 days now happens automatically before our first client kickoff call.",
       author: "Marcus Vance",
       title: "Managing Partner, Apex Legal"
     },
@@ -52,7 +52,7 @@ export default function IndustryCaseStudies() {
         "100% data audit compliance for regulatory reviews",
         "Allowed firm to scale 3x assets without hiring additional back-office staff"
       ],
-      quote: "The speed and accuracy of Formiqa's document AI has given our analysts hours back every day to focus on portfolio strategy.",
+      quote: "The speed and accuracy of Cortexa's document AI has given our analysts hours back every day to focus on portfolio strategy.",
       author: "David Sterling",
       title: "Chief Operating Officer"
     }

@@ -88,7 +88,7 @@ export default function TechPlayground() {
             Select Enterprise Workload & View Stack Spec
           </h2>
           <p style={{ fontSize: '16px', color: '#94a3b8', margin: 0 }}>
-            Click a use case below to inspect Formiqa's recommended model router, vector database, and real-time execution payload.
+            Click a use case below to inspect Cortexa's recommended model router, vector database, and real-time execution payload.
           </p>
         </div>
 

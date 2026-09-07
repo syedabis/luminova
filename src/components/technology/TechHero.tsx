@@ -114,7 +114,7 @@ export default function TechHero() {
               maxWidth: '620px',
               marginBottom: '36px'
             }}>
-              From ultra-low latency voice bots to high-throughput RAG search engines and multi-agent workflows—explore the battle-tested engineering stack powering Formiqa deployments.
+              From ultra-low latency voice bots to high-throughput RAG search engines and multi-agent workflows—explore the battle-tested engineering stack powering Cortexa deployments.
             </p>
 
             {/* CTA Buttons */}
@@ -200,7 +200,7 @@ export default function TechHero() {
                 <span style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#f59e0b' }} />
                 <span style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: '#10b981' }} />
                 <span style={{ fontSize: '13px', color: '#64748b', marginLeft: '8px', fontFamily: 'monospace' }}>
-                  formiqa_system_architecture.v3
+                  cortexa_system_architecture.v3
                 </span>
               </div>
               <Server size={16} color="#38bdf8" />

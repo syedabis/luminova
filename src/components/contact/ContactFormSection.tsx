@@ -489,8 +489,8 @@ export default function ContactFormSection() {
                   </div>
                   <div>
                     <div style={{ fontSize: '12px', color: '#94a3b8', fontWeight: 600 }}>GENERAL INQUIRIES & NDAS</div>
-                    <a href="mailto:hello@formiqa.ai" style={{ fontSize: '16px', fontWeight: 700, color: '#ffffff', textDecoration: 'none' }}>
-                      hello@formiqa.ai
+                    <a href="mailto:hello@cortexastudios.com" style={{ fontSize: '16px', fontWeight: 700, color: '#ffffff', textDecoration: 'none' }}>
+                      hello@cortexastudios.com
                     </a>
                   </div>
                 </div>

@@ -27,7 +27,7 @@ const comfortaa = Comfortaa({
 });
 
 export const metadata: Metadata = {
-  title: 'AI & Automation Agency :: Formiqa',
+  title: 'AI & Automation Agency :: Cortexa Studios',
   description: 'We help B2B service teams streamline operations and grow revenue through AI-powered automation — reducing manual tasks, saving time and elevating the customer experience.',
   icons: {
     icon: '/images/asset_53_6858f95b4522ba945ca91454_Logo-markv2.svg',

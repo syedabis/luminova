@@ -22,7 +22,7 @@ export default function Footer() {
             background: 'linear-gradient(180deg, hsl(0deg 0% 3.94%) 0%, hsl(0deg 0% 4.72%) 100%)'
           }}
         >
-          {/* Subtle Top-Left Glow (adapted for Formiqa's primary green theme) */}
+          {/* Subtle Top-Left Glow (adapted for Cortexa's primary green theme) */}
           <div style={{
             position: 'absolute',
             top: '-150px',
@@ -57,7 +57,7 @@ export default function Footer() {
                   {/* Social Icons Row */}
                   <div style={{ display: 'flex', alignItems: 'center', gap: '16px', paddingTop: '8px' }}>
                     <a 
-                      href="https://www.linkedin.com/company/formiqa" 
+                      href="https://www.linkedin.com/company/cortexa" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       aria-label="LinkedIn"
@@ -166,10 +166,10 @@ export default function Footer() {
                 <div className="loro-col-span-4" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   <div>
                     <h3 style={{ fontSize: '12px', fontWeight: 700, color: '#ffffff', textTransform: 'uppercase', margin: 0 }}>
-                      Studio & Contact
+                      LET'S BUILD TOGETHER
                     </h3>
                     <p style={{ marginTop: '4px', fontSize: '10px', fontWeight: 500, textTransform: 'uppercase', letterSpacing: '2px', color: '#64748b', margin: 0 }}>
-                      Formiqa Technologies
+                      Cortexa Studios
                     </p>
                   </div>
 
@@ -206,12 +206,12 @@ export default function Footer() {
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                       <Mail size={16} color="#cbd5e1" style={{ flexShrink: 0 }} />
                       <a 
-                        href="mailto:hello@formiqa.io" 
+                        href="mailto:hello@cortexastudios.com" 
                         style={{ fontSize: '13px', color: '#cbd5e1', textDecoration: 'none', transition: 'color 0.2s' }}
                         onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
                         onMouseLeave={(e) => e.currentTarget.style.color = '#cbd5e1'}
                       >
-                        hello@formiqa.io
+                        hello@cortexastudios.com
                       </a>
                     </div>
                   </div>
@@ -244,7 +244,7 @@ export default function Footer() {
                       e.currentTarget.style.boxShadow = '0 4px 12px rgba(16, 185, 129, 0.2)';
                     }}
                   >
-                    Get Quote
+                    Free AI Audit
                   </Link>
                 </div>
 
@@ -266,23 +266,13 @@ export default function Footer() {
               >
                 {/* Copyright */}
                 <p style={{ fontSize: '13px', color: '#94a3b8', margin: 0 }}>
-                  © {new Date().getFullYear()} Formiqa. All rights reserved.
+                  © {new Date().getFullYear()} Cortexa. All rights reserved.
                 </p>
 
                 {/* Tagline Quote */}
                 <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)', margin: 0, fontStyle: 'italic', textAlign: 'center' }}>
                   “We build with empathy, creativity, and purpose.”
                 </p>
-
-                {/* Legal Links */}
-                <div style={{ display: 'flex', gap: '16px' }}>
-                  <Link href="/privacy" className="footer-hover-link" style={{ '--link-c': '#7C3AED' } as React.CSSProperties}>
-                    Privacy
-                  </Link>
-                  <Link href="/terms" className="footer-hover-link" style={{ '--link-c': '#2563EB' } as React.CSSProperties}>
-                    Terms
-                  </Link>
-                </div>
               </div>
             </div>
 

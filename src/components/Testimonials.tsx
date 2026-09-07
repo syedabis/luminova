@@ -9,7 +9,7 @@ export default function Testimonials() {
       beforeLabel: "BEFORE",
       beforeQuote: '"Our sales team spent hours manually qualifying leads and updating HubSpot CRM. We lost high-intent prospects during weekends and off-hours."',
       afterLabel: "AFTER",
-      afterQuote: '"Formiqa built a 24/7 AI Lead Responder that engages inbound leads instantly. Our lead-to-meeting conversion rate jumped by 42% in 30 days."',
+      afterQuote: '"Cortexa built a 24/7 AI Lead Responder that engages inbound leads instantly. Our lead-to-meeting conversion rate jumped by 42% in 30 days."',
       author: "David Chen",
       role: "VP of Growth, Nexus Logistics",
       avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80"
@@ -18,7 +18,7 @@ export default function Testimonials() {
       beforeLabel: "BEFORE",
       beforeQuote: '"Chasing overdue client invoices and sending manual payment reminders was dragging down our cash flow and taking up half our Operations Manager\'s time."',
       afterLabel: "AFTER",
-      afterQuote: '"The automated smart invoice & review collection workflow Formiqa deployed cut late payments to near zero and generated 45+ new 5-star reviews on autopilot."',
+      afterQuote: '"The automated smart invoice & review collection workflow Cortexa deployed cut late payments to near zero and generated 45+ new 5-star reviews on autopilot."',
       author: "Sarah Jenkins",
       role: "Operations Director, Apex B2B Services",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
@@ -27,7 +27,7 @@ export default function Testimonials() {
       beforeLabel: "BEFORE",
       beforeQuote: '"We wanted an enterprise AI knowledge bot trained on our private company SOPs and technical docs, but couldn\'t risk data leaks or external API vulnerabilities."',
       afterLabel: "AFTER",
-      afterQuote: '"Formiqa engineered a secure, fine-tuned RAG assistant for our internal team. It reduced employee onboarding time by 50% with zero data privacy concerns."',
+      afterQuote: '"Cortexa engineered a secure, fine-tuned RAG assistant for our internal team. It reduced employee onboarding time by 50% with zero data privacy concerns."',
       author: "Elena Rostova",
       role: "Chief Technology Officer, Vantage Cloud",
       avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&auto=format&fit=crop&q=80"
@@ -66,7 +66,7 @@ export default function Testimonials() {
             gap: '40px'
           }}>
             
-            {/* Left Column: BEFORE FORMIQA */}
+            {/* Left Column: BEFORE CORTEXA */}
             <div style={{ borderRight: '1px solid rgba(255, 255, 255, 0.06)', paddingRight: '20px' }}>
               <div style={{
                 display: 'flex',
@@ -82,7 +82,7 @@ export default function Testimonials() {
                   color: '#64748b',
                   textTransform: 'uppercase'
                 }}>
-                  BEFORE FORMIQA
+                  BEFORE CORTEXA
                 </span>
               </div>
 
@@ -98,7 +98,7 @@ export default function Testimonials() {
               </p>
             </div>
 
-            {/* Right Column: AFTER FORMIQA */}
+            {/* Right Column: AFTER CORTEXA */}
             <div>
               <div style={{
                 display: 'flex',
@@ -114,7 +114,7 @@ export default function Testimonials() {
                   color: '#10b981',
                   textTransform: 'uppercase'
                 }}>
-                  AFTER FORMIQA
+                  AFTER CORTEXA
                 </span>
               </div>
 
@@ -125,7 +125,7 @@ export default function Testimonials() {
                 lineHeight: 1.35,
                 marginBottom: '32px'
               }}>
-                "Formiqa deployed an automated AI workflow that reduced client onboarding time by 80% and saved our executive team 30+ hours weekly."
+                "Cortexa deployed an automated AI workflow that reduced client onboarding time by 80% and saved our executive team 30+ hours weekly."
               </h3>
 
               {/* Divider & Author Meta */}

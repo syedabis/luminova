@@ -12,8 +12,8 @@ import EngineerCertifications from '@/components/engineer/EngineerCertifications
 import EngineerContact from '@/components/engineer/EngineerContact';
 
 export const metadata = {
-  title: 'Syed Abis | Lead AI & Autonomous Systems Architect @ Formiqa',
-  description: 'Portfolio of Syed Abis, Lead AI Engineer at Formiqa. Specializing in LLM multi-agent orchestration, RAG vector search, and production AI workflows.',
+  title: 'Syed Abis | Lead AI & Autonomous Systems Architect @ Cortexa',
+  description: 'Portfolio of Syed Abis, Lead AI Engineer at Cortexa. Specializing in LLM multi-agent orchestration, RAG vector search, and production AI workflows.',
 };
 
 export default function EngineerPortfolioPage() {

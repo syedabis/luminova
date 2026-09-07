@@ -173,99 +173,7 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Services Dropdown */}
-            <div style={{ position: 'relative' }}>
-              <button
-                onClick={() => toggleDropdown('services')}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  color: activeDropdown === 'services' ? '#ffffff' : '#a1a8b8',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '4px',
-                  fontSize: '15px',
-                  fontWeight: 500,
-                  transition: 'color 0.2s ease'
-                }}
-              >
-                Services <ChevronDown size={14} style={{ transform: activeDropdown === 'services' ? 'rotate(180deg)' : 'none', transition: '0.2s' }} />
-              </button>
 
-              {activeDropdown === 'services' && (
-                <div style={{
-                  position: 'absolute',
-                  top: '100%',
-                  left: 0,
-                  marginTop: '16px',
-                  backgroundColor: '#14171f',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
-                  borderRadius: '16px',
-                  padding: '16px',
-                  minWidth: '260px',
-                  zIndex: 1000,
-                  boxShadow: '0 20px 40px rgba(0,0,0,0.6)'
-                }}>
-                  <Link href="#services" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
-                    Strategy + Delivery
-                  </Link>
-                  <Link href="#services" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
-                    AI & Automation Audits
-                  </Link>
-                  <Link href="#services" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
-                    Consulting & Advisory
-                  </Link>
-                  <Link href="#services" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
-                    Support & Maintenance
-                  </Link>
-                </div>
-              )}
-            </div>
-
-            {/* Learn Dropdown */}
-            <div style={{ position: 'relative' }}>
-              <button
-                onClick={() => toggleDropdown('learn')}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  color: activeDropdown === 'learn' ? '#ffffff' : '#a1a8b8',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '4px',
-                  fontSize: '15px',
-                  fontWeight: 500,
-                  transition: 'color 0.2s ease'
-                }}
-              >
-                Learn <ChevronDown size={14} style={{ transform: activeDropdown === 'learn' ? 'rotate(180deg)' : 'none', transition: '0.2s' }} />
-              </button>
-
-              {activeDropdown === 'learn' && (
-                <div style={{
-                  position: 'absolute',
-                  top: '100%',
-                  left: 0,
-                  marginTop: '16px',
-                  backgroundColor: '#14171f',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
-                  borderRadius: '16px',
-                  padding: '16px',
-                  minWidth: '200px',
-                  zIndex: 1000,
-                  boxShadow: '0 20px 40px rgba(0,0,0,0.6)'
-                }}>
-                  <Link href="#faq" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
-                    Insights
-                  </Link>
-                  <Link href="#faq" onClick={() => setActiveDropdown(null)} style={{ display: 'block', padding: '10px 14px', color: '#e2e8f0', fontSize: '14px', borderRadius: '8px', textDecoration: 'none' }} className="dropdown-item-hover">
-                    Resources
-                  </Link>
-                </div>
-              )}
-            </div>
 
             <Link href="/technology" style={{ color: '#a1a8b8', fontSize: '15px', fontWeight: 500, textDecoration: 'none', transition: 'color 0.2s ease' }}>
               Technology
@@ -331,10 +239,8 @@ export default function Navbar() {
         }}>
           <Link href="/industries" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Industries</Link>
           <Link href="/solutions" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Solutions</Link>
-          <Link href="#services" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Services</Link>
           <Link href="/technology" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Technology</Link>
-          <Link href="#faq" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Learn</Link>
-          <Link href="#contact" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Contact</Link>
+          <Link href="/contact" onClick={() => setMobileMenuOpen(false)} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Contact</Link>
           <Link
             href="#contact"
             onClick={() => setMobileMenuOpen(false)}

@@ -93,7 +93,7 @@ export default function TechCTA() {
             </div>
 
             <h2 style={{ fontSize: 'clamp(32px, 4vw, 44px)', fontWeight: 800, color: '#ffffff', marginBottom: '14px', letterSpacing: '-0.02em' }}>
-              Architect Your AI Stack with Formiqa
+              Architect Your AI Stack with Cortexa
             </h2>
             <p style={{ fontSize: '16px', color: '#94a3b8', margin: 0 }}>
               Book a complimentary 30-minute technical session with our lead AI architects to review model routing, vector RAG, and API integration feasibility.

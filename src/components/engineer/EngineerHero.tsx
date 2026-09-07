@@ -53,7 +53,7 @@ export default function EngineerHero() {
             }}>
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#34d399', boxShadow: '0 0 10px #34d399' }} />
               <span style={{ fontSize: '12px', fontWeight: 700, color: '#34d399', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-                LEAD AI ARCHITECT @ FORMIQA AGENCY
+                LEAD AI ARCHITECT @ CORTEXA AGENCY
               </span>
             </div>
 
@@ -180,7 +180,7 @@ export default function EngineerHero() {
               <div><span style={{ color: '#c084fc' }}>const</span> <span style={{ color: '#38bdf8' }}>engineer</span> = &#123;</div>
               <div style={{ paddingLeft: '20px' }}><span style={{ color: '#94a3b8' }}>name:</span> <span style={{ color: '#34d399' }}>'Syed Abis'</span>,</div>
               <div style={{ paddingLeft: '20px' }}><span style={{ color: '#94a3b8' }}>role:</span> <span style={{ color: '#34d399' }}>'Principal AI & Automation Architect'</span>,</div>
-              <div style={{ paddingLeft: '20px' }}><span style={{ color: '#94a3b8' }}>agency:</span> <span style={{ color: '#34d399' }}>'Formiqa AI'</span>,</div>
+              <div style={{ paddingLeft: '20px' }}><span style={{ color: '#94a3b8' }}>agency:</span> <span style={{ color: '#34d399' }}>'Cortexa AI'</span>,</div>
               <div style={{ paddingLeft: '20px' }}><span style={{ color: '#94a3b8' }}>stack:</span> [</div>
               <div style={{ paddingLeft: '40px', color: '#f59e0b' }}>'OpenAI GPT-4o', 'Claude 3.5', 'LangChain',</div>
               <div style={{ paddingLeft: '40px', color: '#f59e0b' }}>'Pinecone', 'Python FastAPI', 'Make/n8n'</div>
